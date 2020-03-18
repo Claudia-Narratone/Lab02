@@ -56,7 +56,10 @@ public class FXMLController {
     		dictionary.addWord(alienWord, translation);
     		txtResult.appendText("parola aggiunta al dizionario: "+alienWord+"\n");
     	}else {
-    		txtResult.appendText("Traduzione "+testo+": "+dictionary.translateWord(testo)+"\n");
+    		for(String s:dictionary.translateWord(testo)) {
+    			txtResult.appendText("Traduzione "+testo+": "+s+"\n");
+    		}
+    		
     	}
     }
     
